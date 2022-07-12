@@ -2,7 +2,7 @@ import { useRoutes, Navigate } from "react-router-dom";
 import React from "react";
 import Login from "../views/Login/Login";
 import Home from "../views/Home/Home";
-import Layout from "antd/lib/layout/layout";
+import Layout from "../components/layout/index";
 
 
 
@@ -29,4 +29,4 @@ const Router = () => {
     return element
 }
 
-export default Router
+export default Router;
