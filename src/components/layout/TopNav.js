@@ -1,28 +1,38 @@
 import { Layout, Menu } from "antd"
 import React from "react";
-// import { useSelector } from "react-redux";
-import { setCurMenu } from "../../store/commonSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { setCurMenu } from '../../store/commonSlice'
+import logo from '../../assets/house.png'
 const { Header } = Layout;
 
 
-
-const itemsl = ['首页', '管理'].map((key) => ({
-    key,
-    label: `${key}`,
-}));
-
 const Topnav = () => {
-    // const menu = useSelector((state) => state.common.menu);
+
+    const menu = useSelector((state) => state.comon.menu)
+    const curMenu = useSelector(state => state.comon.curMenu)
     // console.log('menu',menu)
-    const handleChange = (keyPath) => {
-        console.log(keyPath)
+
+    const dispatch = useDispatch();
+    const handleOclick = ({ key }) => {
+        console.log(key)
+        dispatch(setCurMenu(key))
     }
+
+
     return (
-        <Header onChange={handleChange}>
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['首页']} items={itemsl} />
+        <Header className="header">
+            {/* <div className="logo"></div> */}
+            <Menu
+                theme="dark"
+                mode="horizontal"
+                onClick={handleOclick}
+                defaultSelectedKeys={curMenu}
+                items={menu.map(item => ({
+                    label: item.name,
+                    key: item.name
+                }))} />
         </Header>
     )
 
 }
-
-export default Topnav
+export default Topnav;

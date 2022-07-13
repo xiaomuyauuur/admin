@@ -6,6 +6,7 @@ import commonReducer from './commonSlice'
 // 实现数据持久化
 import storage from 'redux-persist/lib/storage'
 import { persistReducer, persistStore } from 'redux-persist';
+
 const persistConfig = {
     key: 'root',
     storage,

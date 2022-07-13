@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // 声明初始化的全局状态
 const initialState = {
-    adminInfo:{}
+    adminInfo:null
 }
 
 // 通过 createSlice 创建了actioncertor 也创建了 reducer

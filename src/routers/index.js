@@ -1,9 +1,13 @@
 import { useRoutes, Navigate } from "react-router-dom";
-import React from "react";
+import React , { lazy } from "react";
 import Login from "../views/Login/Login";
 import Home from "../views/Home/Home";
 import Layout from "../components/layout/index";
 
+
+// 路由懒加载
+const Room = lazy(() => import('../views/Room/Room'));
+const Build = lazy(() => import('../views/Build/Build'));
 
 
 // 独立页面
@@ -15,7 +19,9 @@ const frameOut = [
 // 功能页面
 const frameIn = [
     { path: 'index', element: <Home /> },
-    { path: '*', element: <Navigate to="/index" /> }
+    { path: 'setbuild', element:<Build /> },
+    { path: 'setroom', element: <Room />},
+    { path: '*', element: <Navigate to="/index" /> },
 ]
 
 const Router = () => {

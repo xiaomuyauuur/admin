@@ -4,10 +4,13 @@ export default [
         url: '/index'
     },
     {
-        name:'设置',
-        children:[
-            { name:'房型维护',url:'/setroom' },
-            { name:'楼栋楼层',url:'/setbuild' }
+        name: '设置',
+        children: [
+            { name: '房型维护', url: '/setroom' },
+            { name: '楼栋楼层', url: '/setbuild' },
+            { name: '房间管理', url: '/roomlist' }
         ]
     }
+
+
 ]
