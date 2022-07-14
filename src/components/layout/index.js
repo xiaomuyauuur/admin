@@ -17,12 +17,7 @@ const Abox = () => {
     const navigate = useNavigate();
     const adminInfo = useSelector(state=>state.admin.adminInfo);
     useEffect(()=>{
-        if(!adminInfo) {
-            MessagePlugin.info('信息丢失请重新登录', 3 * 1000);
-            setTimeout(()=>{
-                navigate('/login',{replace:true})
-            },3000)
-        }
+        if(!adminInfo) navigate('/go',{replace:true})
     },{})
 
     return (

@@ -1,0 +1,14 @@
+.howmuch {
+    line-height: 3; // 3倍行高
+}
+
+.buildList {
+    display: flex;
+
+    &>div {
+        line-height: 2;
+        padding: 2 20px;
+        margin-right: 10px;
+        border: 1px solid rgb(199, 199, 249)
+    }
+}

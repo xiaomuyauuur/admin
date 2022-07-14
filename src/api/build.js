@@ -1,13 +1,13 @@
 import $api from "./server";
 
-// 添加管理员
-export const addAdmin = async (data) => {
+// 添加楼栋
+export const addBuild = async (data) => {
     let res = await $api.post('/admin/add', data)
     return res.data;
 }
 
-// 管理员登录
-export const loginAdmin = async (data) => {
+// 查询所有的楼栋
+export const getAllBuild = async (data) => {
     let res = await $api.post('/admin/login', data)
     return res.data;
 }

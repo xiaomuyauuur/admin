@@ -3,6 +3,7 @@ import React , { lazy } from "react";
 import Login from "../views/Login/Login";
 import Home from "../views/Home/Home";
 import Layout from "../components/layout/index";
+import Go from "../views/Go/Go";
 
 
 // 路由懒加载
@@ -13,6 +14,7 @@ const Build = lazy(() => import('../views/Build/Build'));
 // 独立页面
 const frameOut = [
     { path: '/login', element: <Login /> },
+    { path:'/go',element:<Go /> }
 ]
 
 
